@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <h1>Guia Clientes</h1>
-    <Cliente :cliente="clienteVictor" />
-    <Cliente nome="Matheus"  email="matheu2s@gmail.com" idade="2"/>
-    <Cliente nome="Matheus"  email="mat2heus@gmail.com" idade="4"/>
-    <Cliente nome="Matheus" email="mat22heus@gmail.com" idade="54"/>
+    <input type="text" v-model="clienteVictor.nome">
+    <Cliente :cliente="clienteVictor" :showIdade="true" />
+    <Cliente :cliente="clienteVictor" :showIdade="false"/>
+    <Cliente :cliente="clienteVictor" :showIdade="true" />
+    <Cliente :cliente="clienteVictor" :showIdade="false"/>
 
     <Produto/>
     
@@ -19,11 +19,11 @@ export default {
   name: 'App',
   data(){
     return{
-      
+      nomeDoVictor: "Victor Lima",
       clienteVictor: {
         nome: "victor lima",
         email: "victor@gmail.com",
-        idade: 99
+        idade: 2
       }
     }
   },

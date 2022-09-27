@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <h3>Meu produto</h3>
     <p>bla bla bla</p>
@@ -14,4 +14,4 @@ export default {
 
 <style>
 
-</style>
+</style> -->
