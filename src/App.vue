@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import _ from 'lodash';
 import Cliente from './components/Cliente';
 // import Produto from './components/Produto';
 export default {
@@ -61,7 +62,12 @@ methods:{
     this.clientes.filter(cliente => cliente.id != id);
     this.clientes = novoArray;
   }
-}
+},
+  computed: {
+    orderClientes: function(){
+      return _.orderBy(this.clientes,['nome'], ['asc']);
+    }
+  }
 }
 </script>
 
